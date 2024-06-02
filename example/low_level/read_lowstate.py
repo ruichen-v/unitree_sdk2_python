@@ -10,9 +10,11 @@ import unitree_legged_const as go2
 def LowStateHandler(msg: LowState_):
     
     # print front right hip motor states
-    print("FR_0 motor state: ", msg.motor_state[go2.LegID["FR_0"]])
-    print("IMU state: ", msg.imu_state)
-    print("Battery state: voltage: ", msg.power_v, "current: ", msg.power_a)
+    # print("FR_0 motor state: ", msg.motor_state[go2.LegID["FR_0"]])
+    # print("IMU state: ", msg.imu_state)
+    # print("Battery state: voltage: ", msg.power_v, "current: ", msg.power_a)
+    
+    print(f"IMU: {msg.imu_state.rpy[0]:.3f}, {msg.imu_state.rpy[1]:.3f}, {msg.imu_state.rpy[2]:.3f}")
 
 
 if __name__ == "__main__":

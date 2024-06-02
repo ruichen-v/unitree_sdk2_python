@@ -43,7 +43,7 @@ if __name__ == '__main__':
         cmd.motor_cmd[go2.LegID["RL_2"]].tau = 1.0 # target toque is set to 1N.m
 
         # Poinstion(rad) control, set RL_0 rad
-        cmd.motor_cmd[go2.LegID["RL_0"]].q = 0.0  # Taregt angular(rad)
+        cmd.motor_cmd[go2.LegID["RL_0"]].q = 0.5  # Taregt angular(rad)
         cmd.motor_cmd[go2.LegID["RL_0"]].kp = 10.0 # Poinstion(rad) control kp gain
         cmd.motor_cmd[go2.LegID["RL_0"]].dq = 0.0  # Taregt angular velocity(rad/ss)
         cmd.motor_cmd[go2.LegID["RL_0"]].kd = 1.0  # Poinstion(rad) control kd gain
